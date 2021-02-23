@@ -9,10 +9,11 @@ function Sectionitem() {
 }
 
 const itemStyle: CSSProperties = {
-    background: 'yellow',
+    background: 'goldenrod',
     height: '12rem',
     width: '8rem',
-    margin: '2rem'
+    margin: '2rem',
+    border: '2px solid black'
 }
 
 export default Sectionitem;

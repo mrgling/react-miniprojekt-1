@@ -17,7 +17,7 @@ function Content() {
 }
 
 const contentStyle: CSSProperties = {
-    background: 'red',
+    background: 'darkslategrey',
     width: '75%',
     display: 'grid',
     gridTemplateRows: 'auto',

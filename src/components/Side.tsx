@@ -13,7 +13,7 @@ function Side() {
 const sideStyle: CSSProperties = {
     display: 'flex',
     flexDirection: 'column',
-    background: 'blue',
+    background: 'slategrey',
     width: '25%'
 }
 
