@@ -19,8 +19,9 @@ function Content() {
 const contentStyle: CSSProperties = {
     background: 'red',
     width: '75%',
-    display: 'flex',
-    flexWrap: 'wrap'
+    display: 'grid',
+    gridTemplateRows: 'auto',
+    gridTemplateColumns: '1fr 1fr 1fr 1fr'
 }
 
 export default Content;

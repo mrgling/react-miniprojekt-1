@@ -3,7 +3,7 @@ import React, { CSSProperties } from 'react';
 function Sectionitem() {
     return (
         <div style={ itemStyle }>
-            <p>ITEM</p>
+            <p>BOK</p>
         </div>
     )
 }
@@ -11,10 +11,8 @@ function Sectionitem() {
 const itemStyle: CSSProperties = {
     background: 'yellow',
     height: '12rem',
-    width: '10rem',
-    margin: '2rem',
-    display: 'flex',
-    flex: '1 0 21%;'
+    width: '8rem',
+    margin: '2rem'
 }
 
 export default Sectionitem;

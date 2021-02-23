@@ -3,12 +3,16 @@ import React, { CSSProperties } from 'react';
 function Side() {
     return (
         <div style={ sideStyle }>
-            <p>SIDE</p>
+            <button>GENRE</button>
+            <button>TOPPLISTA</button>
+            <button>SLUMPA</button>
         </div>
     )
 }
 
 const sideStyle: CSSProperties = {
+    display: 'flex',
+    flexDirection: 'column',
     background: 'blue',
     width: '25%'
 }

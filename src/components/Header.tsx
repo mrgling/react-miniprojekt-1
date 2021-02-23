@@ -13,8 +13,8 @@ function Header() {
 }
 
 const headerStyle: CSSProperties = {
+    background: 'linear-gradient(180deg, #4D6724, #243D19)',   
     height: '5rem',
-    background: 'green',
     display: 'flex',
     padding: '0 1rem',
     alignItems: 'center',
