@@ -1,10 +1,14 @@
 import React, { CSSProperties } from 'react';
 import logo from '../assets/logo.png';
+import { Link } from 'react-router-dom';
 
 function Header() {
     return (
         <div style={ headerStyle }>
-            <img src={logo} style={ logoStyle } alt="logo" />
+            <Link to="/">
+                <img src={logo} style={ logoStyle } alt="logo" />
+            </Link>
+
             <h1 style={ headerItem }>Vad ska jag läsa idag?</h1>
         </div>
 
@@ -29,6 +33,7 @@ const headerItem: CSSProperties = {
 }
 
 const logoStyle: CSSProperties = {
+    top: '0.5rem',
     height: '4rem',
     left: '1rem',
     position: 'absolute'
