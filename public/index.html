@@ -25,18 +25,24 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>Vad ska jag läsa idag?</title>
+    <script src="https://unpkg.com/react/umd/react.production.min.js" crossorigin></script>
+
+<script
+  src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"
+  crossorigin></script>
+
+<script
+  src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js"
+  crossorigin></script>
+
+<script>var Alert = ReactBootstrap.Alert;</script>
 
     <style>
-    html, body, body > div {
+    html, body, body > div, #root, #root > div, .App {
       height: 100%;
       margin: 0;
       font-family: Verdana, Geneva, Tahoma, sans-serif;
-    }
-
-    body {
-      min-height: 100%;
-    }
-    
+    }    
     </style>
 
   </head>

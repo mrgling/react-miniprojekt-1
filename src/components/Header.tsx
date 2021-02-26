@@ -29,7 +29,8 @@ const headerItem: CSSProperties = {
     fontSize: '2rem',    
     margin: '0',
     padding: '0',
-    display: 'flex'
+    display: 'flex',
+    color: 'white'
 }
 
 const logoStyle: CSSProperties = {

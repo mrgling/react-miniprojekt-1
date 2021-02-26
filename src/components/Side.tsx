@@ -1,11 +1,13 @@
 import React, { CSSProperties } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Button from 'react-bootstrap/Button';
 
 function Side() {
     return (
         <div style={ sideStyle }>
-            <button>GENRE</button>
-            <button>TOPPLISTA</button>
-            <button>SLUMPA</button>
+            <Button style={ buttonStyle } variant="success">Topplista</Button>{' '}
+            <Button style={ buttonStyle } variant="warning">Slumpa</Button>{' '}
+            <Button style={ buttonStyle } variant="primary">Info</Button>{' '}
         </div>
     )
 }
@@ -13,8 +15,18 @@ function Side() {
 const sideStyle: CSSProperties = {
     display: 'flex',
     flexDirection: 'column',
-    background: 'slategrey',
-    width: '25%'
+    background: 'lightsteelblue',
+    width: '25%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '100%'
+}
+
+const buttonStyle: CSSProperties = {
+    display: 'flex',
+    justifyContent: 'center',
+    width: '8rem',
+    margin: '1rem'
 }
 
 export default Side;

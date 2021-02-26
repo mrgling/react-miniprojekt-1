@@ -20,6 +20,7 @@ function BookDetail() {
 const contentStyle: CSSProperties = {
     background: 'red',
     //width: '75%',
+    height: '100%',
     display: 'grid',
     gridTemplateRows: 'auto',
     gridTemplateColumns: '1fr 1fr 1fr 1fr'

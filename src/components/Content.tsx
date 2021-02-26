@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { CSSProperties } from 'react';
 import { Route} from 'react-router-dom';
 import BookDetail from './BookDetail';
 import BookView from './BookView';
 
 function Content() {
     return (
-        <div>
+        <div style={ contentStyle }>
             <Route exact path="/" render={() => 
                         <BookView/>
                     }/>
@@ -15,5 +15,8 @@ function Content() {
     )
 }
 
+const contentStyle: CSSProperties = {
+    width: '100%'
+}
 
 export default Content;
