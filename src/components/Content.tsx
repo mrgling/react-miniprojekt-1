@@ -1,27 +1,19 @@
-import React, { CSSProperties } from 'react';
-import Sectionitem from './Sectionitem';
+import React from 'react';
+import { Route} from 'react-router-dom';
+import BookDetail from './BookDetail';
+import BookView from './BookView';
 
 function Content() {
     return (
-        <div style={ contentStyle }>
-            <Sectionitem />
-            <Sectionitem />
-            <Sectionitem />
-            <Sectionitem />
-            <Sectionitem />
-            <Sectionitem />
-            <Sectionitem />
-            <Sectionitem />
+        <div>
+            <Route exact path="/" render={() => 
+                        <BookView/>
+                    }/>
+            <Route path="/bookdetail" component={BookDetail}/>
+            
         </div>
     )
 }
 
-const contentStyle: CSSProperties = {
-    background: 'darkslategrey',
-    width: '75%',
-    display: 'grid',
-    gridTemplateRows: 'auto',
-    gridTemplateColumns: '1fr 1fr 1fr 1fr'
-}
 
 export default Content;

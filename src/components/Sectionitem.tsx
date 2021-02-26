@@ -1,9 +1,13 @@
 import React, { CSSProperties } from 'react';
+import { Link } from 'react-router-dom';
 
 function Sectionitem() {
     return (
         <div style={ itemStyle }>
-            <p>BOK</p>
+            <Link to="/bookdetail">
+                <p>Bok</p>
+            </Link>
+
         </div>
     )
 }
