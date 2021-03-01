@@ -7,9 +7,13 @@ function Side() {
         <div style={ sideStyle }>
             <Button style={ buttonStyle } variant="success">Topplista</Button>{' '}
             <Button style={ buttonStyle } variant="warning">Slumpa</Button>{' '}
-            <Button style={ buttonStyle } variant="primary">Info</Button>{' '}
+            <Button style={ buttonStyle } variant="primary" onClick={ openModal }>Marsvin</Button>{' '}
         </div>
     )
+}
+
+const openModal = () => {
+    alert('HEJ ALLA GLADA MARSVIN');
 }
 
 const sideStyle: CSSProperties = {

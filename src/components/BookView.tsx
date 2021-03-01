@@ -19,7 +19,6 @@ function BookView() {
 
 const bookviewStyle: CSSProperties = {
     background: 'darkslategrey',
-    //width: '75%',
     height: '100%',
     display: 'grid',
     gridTemplateRows: 'auto',
