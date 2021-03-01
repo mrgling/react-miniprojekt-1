@@ -6,7 +6,7 @@ function Side() {
     return (
         <div style={ sideStyle }>
             <Button style={ buttonStyle } variant="success">Topplista</Button>{' '}
-            <Button style={ buttonStyle } variant="warning">Slumpa</Button>{' '}
+            <Button style={ buttonStyle } variant="warning" onClick={ reloadPage }>Slumpa</Button>{' '}
             <Button style={ buttonStyle } variant="primary" onClick={ openModal }>Marsvin</Button>{' '}
         </div>
     )
@@ -16,10 +16,15 @@ const openModal = () => {
     alert('HEJ ALLA GLADA MARSVIN');
 }
 
+const reloadPage = () => {
+    window.location.reload();
+}
+
 const sideStyle: CSSProperties = {
     display: 'flex',
     flexDirection: 'column',
-    background: 'lightsteelblue',
+    background: 'linear-gradient(180deg, #C7C7C7, #F3F3F3)',
+    borderLeft: '1px solid black',
     width: '25%',
     justifyContent: 'center',
     alignItems: 'center',
