@@ -19,7 +19,6 @@ function BookDetail() {
 
 const contentStyle: CSSProperties = {
     background: 'red',
-    //width: '75%',
     height: '100%',
     display: 'grid',
     gridTemplateRows: 'auto',
