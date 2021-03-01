@@ -1,18 +1,15 @@
 import React, { CSSProperties } from 'react';
+import { Poem } from './Content';
 import Sectionitem from './Sectionitem';
 
-function BookView() {
+interface Props {
+    poems: Poem[];
+}
+
+function BookView(props: Props) {
     return (
         <div style={ bookviewStyle }>
-            
-            <Sectionitem />
-            <Sectionitem />
-            <Sectionitem />
-            <Sectionitem />
-            <Sectionitem />
-            <Sectionitem />
-            <Sectionitem />
-            <Sectionitem />
+            {props.poems.map(poem => <Sectionitem poem={poem} />)}
         </div>
     )
 }

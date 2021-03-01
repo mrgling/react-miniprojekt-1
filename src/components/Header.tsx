@@ -9,7 +9,7 @@ function Header() {
                 <img src={logo} style={ logoStyle } alt="logo" />
             </Link>
 
-            <h1 style={ headerItem }>Vad ska jag läsa idag?</h1>
+            <h1 style={ headerItem }>Dagens dikt</h1>
         </div>
 
     )

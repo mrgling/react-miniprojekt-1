@@ -1,11 +1,16 @@
 import React, { CSSProperties } from 'react';
 import { Link } from 'react-router-dom';
+import { Poem } from './Content';
 
-function Sectionitem() {
+interface Props {
+    poem: Poem;
+}
+
+function Sectionitem(props: Props) {
     return (
         <div style={ itemStyle }>
             <Link to="/bookdetail">
-                <p>Bok</p>
+                <p>{props.poem.title}</p>
             </Link>
 
         </div>

@@ -4,15 +4,7 @@ import Sectionitem from './Sectionitem';
 function BookDetail() {
     return (
         <div style={ contentStyle }>
-            
-            <Sectionitem />
-            <Sectionitem />
-            <Sectionitem />
-            <Sectionitem />
-            <Sectionitem />
-            <Sectionitem />
-            <Sectionitem />
-            <Sectionitem />
+            {/* <Sectionitem /> */}
         </div>
     )
 }
