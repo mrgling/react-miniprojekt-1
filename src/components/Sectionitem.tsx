@@ -1,29 +1,47 @@
-import React, { CSSProperties } from 'react';
-import { Link } from 'react-router-dom';
+import React, { Component, CSSProperties } from 'react';
+// import { Link } from 'react-router-dom';
 import { Poem } from './Content';
-
+import Modal from './Modal';
 interface Props {
     poem: Poem;
 }
+interface State {
+    isModalVisible: boolean;
+}
+class Sectionitem extends Component<Props, State> {
 
-function Sectionitem(props: Props) {
-    return (
-        <div style={ itemStyle }>
-            <Link to="/bookdetail" style={ linkStyle }>
-                <p>{props.poem.title}</p>
-                <p style= { poemStyle }>{props.poem.poet.name}</p>
-            </Link>
+    state: State = {
+        isModalVisible: false
+    }
 
-        </div>
-    )
+    openModal = () => this.setState({ isModalVisible: true });
+
+    closeModal = () => this.setState({ isModalVisible: false});
+
+    render() {
+        return (
+            <div style={ itemStyle } onClick={ this.openModal }>
+                    <p>{this.props.poem.title}</p>
+                    <p style= { poemStyle }>{this.props.poem.poet.name}</p>
+    
+            {this.state.isModalVisible && (
+                <Modal persistant shouldClose={this.closeModal}>
+                    <b><p style= { poemStyle }>{this.props.poem.title}</p></b>
+                    <p style= { poemStyle }>{this.props.poem.content}</p>  
+                    <p style= { poemStyle }>{this.props.poem.poet.name}</p>
+                    <button onClick={this.closeModal}>STÄNG</button>
+                </Modal>    
+            )}
+    
+            </div>
+        )
+
+    }
 }
 
 const poemStyle: CSSProperties = {
-    fontSize: '1rem'
-}
-
-const linkStyle: CSSProperties = {
-    color: 'black'
+    fontSize: '1rem',
+    textAlign: 'center'
 }
 
 const itemStyle: CSSProperties = {
@@ -33,10 +51,9 @@ const itemStyle: CSSProperties = {
     background: 'white',
     margin: '1rem',
     border: '1px solid black',
-    textDecoration: 'none',
-    padding: '2rem',
-    display: 'flex',
-    maxWidth: '75%'
+    padding: '1rem',
+    maxWidth: '75%',
+    zIndex: 10
 }
 
 export default Sectionitem;
