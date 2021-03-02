@@ -7,8 +7,11 @@ interface Props {
 }
 
 function BookView(props: Props) {
+
+
+
     return (
-        <div style={ bookviewStyle }>
+        <div style={ bookviewStyle } >
             {props.poems.map(poem => <Sectionitem poem={poem} />)}
         </div>
     )

@@ -43,9 +43,10 @@ class Side extends Component<Props,State> {
             </div>
         )
     }
+
 }
 
-const openModal = () => {
+const openMarsvin = () => {
     alert('HEJ ALLA GLADA MARSVIN');
 }
 
