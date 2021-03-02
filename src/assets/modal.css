@@ -1,0 +1,9 @@
+.fullScreen {
+    height: 100%;
+    width: 100%;
+}
+
+.centered {
+    align-items: center;
+    justify-content: center;
+}

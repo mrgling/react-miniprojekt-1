@@ -7,12 +7,12 @@ function Side() {
         <div style={ sideStyle }>
             <Button style={ buttonStyle } variant="success">Topplista</Button>{' '}
             <Button style={ buttonStyle } variant="warning" onClick={ reloadPage }>Slumpa</Button>{' '}
-            <Button style={ buttonStyle } variant="primary" onClick={ openModal }>Marsvin</Button>{' '}
+            <Button style={ buttonStyle } variant="primary" onClick={ openMarsvin }>Marsvin</Button>{' '}
         </div>
     )
 }
 
-const openModal = () => {
+const openMarsvin = () => {
     alert('HEJ ALLA GLADA MARSVIN');
 }
 
