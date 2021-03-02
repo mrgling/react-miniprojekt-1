@@ -1,7 +1,6 @@
 
 import React, { Component, CSSProperties } from 'react';
 import { Route} from 'react-router-dom';
-import BookDetail from './BookDetail';
 import BookView from './BookView';
 import backgroundClassic from '../assets/background-classic.jpg'
 import backgroundSpace from '../assets/background-space.jpg'
@@ -50,7 +49,7 @@ class Content extends Component<Props, State> {
                 <Route exact path="/">
                     <BookView poems={this.state.poems}/>
                 </Route>
-                <Route path="/bookdetail" component={BookDetail}/>
+                {/* <Route path="/bookdetail" component={BookDetail}/> */}
             
             </div>
         )

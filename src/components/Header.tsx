@@ -18,7 +18,6 @@ function Header() {
 
 const headerStyle: CSSProperties = {
     background: 'linear-gradient(180deg, #616161, #000000)', 
-    //background: 'black',
     height: '5rem',
     display: 'flex',
     padding: '0 1rem',
@@ -36,9 +35,9 @@ const headerItem: CSSProperties = {
 }
 
 const logoStyle: CSSProperties = {
-    top: '0.5rem',
-    height: '4rem',
-    left: '1rem',
+    top: '1.25rem',
+    height: '2.5rem',
+    left: '1.25rem',
     position: 'absolute',
     color: 'white'
   }

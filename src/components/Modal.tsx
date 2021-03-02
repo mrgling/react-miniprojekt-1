@@ -1,6 +1,5 @@
 import React, { Component, CSSProperties } from 'react';
 import ReactDOM from 'react-dom';
-// import { fullScreen, centered } from '../assets';
 
 interface State {}
 interface Props {
@@ -50,7 +49,7 @@ class Modal extends Component<Props, State> {
         width: '100%', 
         alignItems: 'center', 
         justifyContent: 'center', 
-        background: 'rgba(255, 255, 255, 0.9)', 
+        background: 'rgba(255, 253, 247, 0.9)', 
         color: 'black',
         borderRadius: '1rem',
         maxHeight: '75%',
