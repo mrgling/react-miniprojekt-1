@@ -35,9 +35,9 @@ class Side extends Component<Props,State> {
                     </Link>
                 </div>
                 <div>
-                    <Button style={ buttonStyle } variant="success" onClick={ this.changeTheme }>Tema</Button>{' '}
-                    <Button style={ buttonStyle } variant="warning" onClick={ reloadPage }>Slumpa</Button>{' '}
-                    <Button style={ buttonStyle } variant="primary" onClick={ openModal }>Marsvin</Button>{' '}
+                    <Button style={ buttonStyle } variant="info" onClick={ this.changeTheme }>Tema</Button>{' '}
+                    <Button style={ buttonStyle } variant="info" onClick={ reloadPage }>Slumpa</Button>{' '}
+                    <Button style={ buttonStyle } variant="info" onClick={ openMarsvin }>Marsvin</Button>{' '}
                 </div>
     
             </div>

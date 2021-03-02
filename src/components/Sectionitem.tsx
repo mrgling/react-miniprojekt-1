@@ -1,7 +1,7 @@
 import React, { Component, CSSProperties } from 'react';
-// import { Link } from 'react-router-dom';
 import { Poem } from './Content';
 import Modal from './Modal';
+import ErrorBoundary from '../ErrorBoundary';
 interface Props {
     poem: Poem;
 }
@@ -25,12 +25,14 @@ class Sectionitem extends Component<Props, State> {
                     <p style= { poemStyle }>{this.props.poem.poet.name}</p>
     
             {this.state.isModalVisible && (
-                <Modal persistant shouldClose={this.closeModal}>
-                    <b><p style= { poemStyle }>{this.props.poem.title}</p></b>
-                    <p style= { poemStyle }>{this.props.poem.content}</p>  
-                    <p style= { poemStyle }>{this.props.poem.poet.name}</p>
-                    <button onClick={this.closeModal}>STÄNG</button>
-                </Modal>    
+                <ErrorBoundary>
+                    <Modal persistant shouldClose={this.closeModal}>
+                        <b><p style= { poemStyle }>{this.props.poem.title}</p></b>
+                        <p style= { poemStyle }>{this.props.poem.content}</p>  
+                        <p style= { poemStyle }>{this.props.poem.poet.name}</p>
+                        <button onClick={this.closeModal}>STÄNG</button>
+                    </Modal>    
+                </ErrorBoundary>
             )}
     
             </div>
@@ -53,7 +55,7 @@ const itemStyle: CSSProperties = {
     margin: '1rem',
     border: '1px solid black',
     textDecoration: 'none',
-    display: 'flex',
+    // display: 'flex',
     borderRadius: '1rem',
     padding: '1rem',
     maxWidth: '75%',

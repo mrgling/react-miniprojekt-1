@@ -1,10 +1,8 @@
 
 import React, { Component, CSSProperties } from 'react';
 import { Route} from 'react-router-dom';
-import BookDetail from './BookDetail';
 import BookView from './BookView';
 import Background from '../assets/background-classic.jpg'
-
 export interface Poem {
     content: string
     poet: {
@@ -49,7 +47,7 @@ class Content extends Component<Props, State> {
                 <Route exact path="/">
                     <BookView poems={this.state.poems}/>
                 </Route>
-                <Route path="/bookdetail" component={BookDetail}/>
+                {/* <Route path="/bookdetail" component={BookDetail}/> */}
             
             </div>
         )

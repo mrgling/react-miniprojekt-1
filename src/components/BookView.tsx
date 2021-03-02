@@ -1,6 +1,7 @@
 import React, { CSSProperties } from 'react';
 import { Poem } from './Content';
 import Sectionitem from './Sectionitem';
+import ErrorBoundary from '../ErrorBoundary';
 
 interface Props {
     poems: Poem[];
@@ -12,13 +13,14 @@ function BookView(props: Props) {
 
     return (
         <div style={ bookviewStyle } >
+            <ErrorBoundary>
             {props.poems.map(poem => <Sectionitem poem={poem} />)}
+            </ErrorBoundary>
         </div>
     )
 }
 
 const bookviewStyle: CSSProperties = {
-    //background: 'linear-gradient(180deg, #C7C7C7, #F3F3F3)',
     minHeight: '100%',
     display: 'flex',
     flexDirection: 'row',
