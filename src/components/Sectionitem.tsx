@@ -31,7 +31,7 @@ class Sectionitem extends Component<Props, State> {
     
             {this.state.isModalVisible && (
                 <Modal persistant shouldClose={this.closeModal} >
-                    <p>{this.props.poem.title}</p>
+                    <b><p style= { poemStyle }>{this.props.poem.title}</p></b>
                     <p style= { poemStyle }>{this.props.poem.content}</p>  
                     <p style= { poemStyle }>{this.props.poem.poet.name}</p>
                 </Modal>    
@@ -44,7 +44,8 @@ class Sectionitem extends Component<Props, State> {
 }
 
 const poemStyle: CSSProperties = {
-    fontSize: '1rem'
+    fontSize: '1rem',
+    textAlign: 'center'
 }
 
 
@@ -55,15 +56,9 @@ const itemStyle: CSSProperties = {
     background: 'white',
     margin: '1rem',
     border: '1px solid black',
-    // textDecoration: 'none',
     padding: '1rem',
-    // display: 'flex',
     maxWidth: '75%',
     zIndex: 10
 }
-
-// const linkStyle: CSSProperties = {
-//     color: 'black'
-// }
 
 export default Sectionitem;

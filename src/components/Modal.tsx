@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, CSSProperties } from 'react';
 import ReactDOM from 'react-dom';
 // import { fullScreen, centered } from '../assets';
 
@@ -9,35 +9,53 @@ interface Props {
 
 class Modal extends Component<Props> {
     element: HTMLDivElement;
-
+    
     constructor(props: Props) {
         super(props);
         this.element = document.createElement('div');
         this.element.id = 'modal-root';
     }
-
+    
+    
     handleOnClick = () => {
         if (this.props.persistant) return;
         this.props.shouldClose();
     }
-
+    
     componentDidMount() {
         document.body.appendChild(this.element);
     }
-
+    
     componentWillUnmount() {
         document.body.removeChild(this.element);
     }
-
+    
     render() {
         return ReactDOM.createPortal(
-            <div onClick={this.handleOnClick} style={{ height: '100%', width: '100%', alignItems: 'center', justifyContent: 'center', background: 'black', color: 'white' }}>
+            <div onClick={this.handleOnClick} style={ modalStyle }>
                 {this.props.children}
             </div>,
             this.element
-        );
+            );
+        }
+        
     }
 
-}
-
-export default Modal;
+    const modalStyle: CSSProperties = {
+        fontFamily: 'Gloria Hallelujah, cursive',
+        fontSize: '1.2rem',
+        height: '100%', 
+        width: '100%', 
+        alignItems: 'center', 
+        justifyContent: 'center', 
+        background: 'rgba(255, 255, 255, 0.9)', 
+        color: 'black',
+        borderRadius: '1rem',
+        maxHeight: '75%',
+        maxWidth: '75%',
+        margin: '7rem auto',
+        padding: '2rem 5rem'
+    }
+    
+    
+    export default Modal;
