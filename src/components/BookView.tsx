@@ -9,7 +9,7 @@ interface Props {
 function BookView(props: Props) {
     return (
         <div style={ bookviewStyle }>
-            {props.poems.map(poem => <Sectionitem poem={poem} />)}
+            {props.poems.map(poem => <Sectionitem poem={poem} key={poem.title}/>)}
         </div>
     )
 }
