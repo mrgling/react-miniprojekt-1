@@ -30,12 +30,11 @@ class Sectionitem extends Component<Props, State> {
                 </Link> */}
     
             {this.state.isModalVisible && (
-            <Modal persistant shouldClose={this.closeModal} >
-                <h1>
-                    DIKT-MODAL
-                </h1>
-    
-            </Modal>    
+                <Modal persistant shouldClose={this.closeModal} >
+                    <p>{this.props.poem.title}</p>
+                    <p style= { poemStyle }>{this.props.poem.content}</p>  
+                    <p style= { poemStyle }>{this.props.poem.poet.name}</p>
+                </Modal>    
             )}
     
             </div>
