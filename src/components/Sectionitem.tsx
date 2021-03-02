@@ -2,14 +2,12 @@ import React, { Component, CSSProperties } from 'react';
 // import { Link } from 'react-router-dom';
 import { Poem } from './Content';
 import Modal from './Modal';
-
 interface Props {
     poem: Poem;
 }
 interface State {
     isModalVisible: boolean;
 }
-
 class Sectionitem extends Component<Props, State> {
 
     state: State = {
@@ -27,10 +25,11 @@ class Sectionitem extends Component<Props, State> {
                     <p style= { poemStyle }>{this.props.poem.poet.name}</p>
     
             {this.state.isModalVisible && (
-                <Modal persistant shouldClose={this.closeModal} >
+                <Modal persistant shouldClose={this.closeModal}>
                     <b><p style= { poemStyle }>{this.props.poem.title}</p></b>
                     <p style= { poemStyle }>{this.props.poem.content}</p>  
                     <p style= { poemStyle }>{this.props.poem.poet.name}</p>
+                    <button onClick={this.closeModal}>STÄNG</button>
                 </Modal>    
             )}
     
@@ -44,7 +43,6 @@ const poemStyle: CSSProperties = {
     fontSize: '1rem',
     textAlign: 'center'
 }
-
 
 const itemStyle: CSSProperties = {
     fontFamily: 'Gloria Hallelujah, cursive',

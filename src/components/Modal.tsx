@@ -2,12 +2,13 @@ import React, { Component, CSSProperties } from 'react';
 import ReactDOM from 'react-dom';
 // import { fullScreen, centered } from '../assets';
 
+interface State {}
 interface Props {
     persistant?: boolean;
     shouldClose: () => void;
 }
 
-class Modal extends Component<Props> {
+class Modal extends Component<Props, State> {
     element: HTMLDivElement;
     
     constructor(props: Props) {
@@ -15,8 +16,7 @@ class Modal extends Component<Props> {
         this.element = document.createElement('div');
         this.element.id = 'modal-root';
     }
-    
-    
+        
     handleOnClick = () => {
         if (this.props.persistant) return;
         this.props.shouldClose();
@@ -42,6 +42,8 @@ class Modal extends Component<Props> {
     }
 
     const modalStyle: CSSProperties = {
+        display: 'flex',
+        flexDirection: 'column',
         fontFamily: 'Gloria Hallelujah, cursive',
         fontSize: '1.2rem',
         height: '100%', 
@@ -54,10 +56,11 @@ class Modal extends Component<Props> {
         maxHeight: '75%',
         maxWidth: '75%',
         margin: '7rem auto',
-        padding: '2rem 5rem',
+        paddingLeft: '10%',
+        paddingRight: '10%',
         border: '1px solid black',
-        boxShadow: 'rgba(0, 0, 0, 0.15) 1rem 1rem 2rem'
+        boxShadow: 'rgba(0, 0, 0, 0.15) 1rem 1rem 2rem',
+        overflow: 'hidden'
     }
-    
-    
+        
     export default Modal;
