@@ -9,20 +9,34 @@ interface Props {
 function Sectionitem(props: Props) {
     return (
         <div style={ itemStyle }>
-            <Link to="/bookdetail">
+            <Link to="/bookdetail" style={ linkStyle }>
                 <p>{props.poem.title}</p>
+                <p style= { poemStyle }>{props.poem.poet.name}</p>
             </Link>
 
         </div>
     )
 }
 
+const poemStyle: CSSProperties = {
+    fontSize: '1rem'
+}
+
+const linkStyle: CSSProperties = {
+    color: 'black'
+}
+
 const itemStyle: CSSProperties = {
-    background: 'goldenrod',
-    height: '12rem',
-    width: '8rem',
-    margin: '2rem',
-    border: '2px solid black'
+    fontFamily: 'Gloria Hallelujah, cursive',
+    fontSize: '1.2rem',
+    color: 'black',
+    background: 'white',
+    margin: '1rem',
+    border: '1px solid black',
+    textDecoration: 'none',
+    padding: '2rem',
+    display: 'flex',
+    maxWidth: '75%'
 }
 
 export default Sectionitem;

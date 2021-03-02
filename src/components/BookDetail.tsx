@@ -1,5 +1,5 @@
 import React, { CSSProperties } from 'react';
-import Sectionitem from './Sectionitem';
+// import Sectionitem from './Sectionitem';
 
 function BookDetail() {
     return (

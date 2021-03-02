@@ -15,12 +15,13 @@ function BookView(props: Props) {
 }
 
 const bookviewStyle: CSSProperties = {
-    background: 'darkslategrey',
-    height: '100%',
-    display: 'grid',
-    gridTemplateRows: 'auto',
-    gridTemplateColumns: '1fr 1fr 1fr 1fr'
+    background: 'linear-gradient(180deg, #C7C7C7, #F3F3F3)',
+    minHeight: '100%',
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    alignItems: 'center',
+    justifyContent: 'center'
 }
-
 
 export default BookView;

@@ -17,7 +17,7 @@ function Header() {
 }
 
 const headerStyle: CSSProperties = {
-    background: 'linear-gradient(180deg, #4D6724, #243D19)',   
+    background: 'linear-gradient(180deg, #4D6724, #243D19)', 
     height: '5rem',
     display: 'flex',
     padding: '0 1rem',
@@ -26,6 +26,7 @@ const headerStyle: CSSProperties = {
 }
 
 const headerItem: CSSProperties = {
+    fontFamily: 'Gloria Hallelujah, cursive',
     fontSize: '2rem',    
     margin: '0',
     padding: '0',
@@ -37,7 +38,8 @@ const logoStyle: CSSProperties = {
     top: '0.5rem',
     height: '4rem',
     left: '1rem',
-    position: 'absolute'
+    position: 'absolute',
+    border: '1px solid black'
   }
 
 export default Header;
