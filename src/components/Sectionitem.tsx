@@ -31,8 +31,6 @@ const itemStyle: CSSProperties = {
     fontSize: '1.2rem',
     color: 'black',
     background: 'white',
-    // height: '12rem',
-    // width: '15rem',
     margin: '1rem',
     border: '1px solid black',
     textDecoration: 'none',
@@ -40,18 +38,5 @@ const itemStyle: CSSProperties = {
     display: 'flex',
     maxWidth: '75%'
 }
-
-// const itemStyle: CSSProperties = {
-//     fontFamily: 'Gloria Hallelujah, cursive',
-//     fontSize: '1.2rem',
-//     color: 'black',
-//     background: 'white',
-//     height: '12rem',
-//     width: '8rem',
-//     margin: '2rem',
-//     border: '2px solid black',
-//     textDecoration: 'none',
-//     padding: '1rem'
-// }
 
 export default Sectionitem;
