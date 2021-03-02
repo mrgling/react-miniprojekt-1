@@ -11,7 +11,7 @@ function Sectionitem(props: Props) {
         <div style={ itemStyle }>
             <Link to="/bookdetail" style={ linkStyle }>
                 <p>{props.poem.title}</p>
-                <p style= { poemStyle }>{props.poem.content}</p>
+                <p style= { poemStyle }>{props.poem.poet.name}</p>
             </Link>
 
         </div>
