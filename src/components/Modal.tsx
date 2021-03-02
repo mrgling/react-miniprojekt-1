@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import ReactDOM, { createPortal } from 'react-dom';
-// import { fullScreen, centered } from '../assets/modal';
+import ReactDOM from 'react-dom';
+// import { fullScreen, centered } from '../assets';
 
 interface Props {
     persistant?: boolean;
