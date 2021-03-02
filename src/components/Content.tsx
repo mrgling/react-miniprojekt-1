@@ -3,8 +3,8 @@ import React, { Component, CSSProperties } from 'react';
 import { Route} from 'react-router-dom';
 import BookDetail from './BookDetail';
 import BookView from './BookView';
-import Background from '../assets/background-classic.jpg'
-
+import backgroundClassic from '../assets/background-classic.jpg'
+import backgroundSpace from '../assets/background-space.jpg'
 export interface Poem {
     content: string
     poet: {
@@ -15,10 +15,12 @@ export interface Poem {
     url: string
 }
 
-interface Props {}
-
 interface State {
     poems: Poem[];
+}
+
+interface Props {
+    theme: string;
 }
 class Content extends Component<Props, State> {
     state: State = {
@@ -43,9 +45,8 @@ class Content extends Component<Props, State> {
     }
 
     render() {
-        console.log(this.state.poems);
         return (
-            <div style={ contentStyle }>
+            <div style={ contentStyle(this.props) }>
                 <Route exact path="/">
                     <BookView poems={this.state.poems}/>
                 </Route>
@@ -57,13 +58,14 @@ class Content extends Component<Props, State> {
 
 }
 
-const contentStyle: CSSProperties = {
+const contentStyle = (props: Props): CSSProperties =>({
     width: '100%',
-    backgroundImage: `url(${Background})`,
+    //backgroundImage: `url(${Background})`,
+    backgroundImage: `url(${props.theme})`,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     borderRadius: '0 2rem 0 0' 
 
-}
+})
 
 export default Content;

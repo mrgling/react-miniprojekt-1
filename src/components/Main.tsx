@@ -1,14 +1,31 @@
-import React, { CSSProperties } from 'react';
+import React, { Component, CSSProperties } from 'react';
 import Side from './Side';
 import Content from './Content';
 
-function Main() {
-    return (
-        <div style={ mainStyle }>
-            <Content />
-            <Side />
-        </div>
-    )
+interface Props {}
+interface State {
+  theme: string;
+}
+class Main extends Component <Props, State> {
+    state: State = {
+        theme: 'backgroundClassic'
+    }
+    toggleTheme = () => {
+        if (this.state.theme === 'backgroundClassic') {
+            this.setState({ theme: 'backgroundSpace' })            
+            }
+        else {
+            this.setState({ theme: 'backgroundClassic' }) 
+        }
+      }
+    render() {
+        return (
+            <div style={ mainStyle }>
+                <Content theme={this.state.theme}/>
+                <Side onThemeClick = {this.toggleTheme}/>
+            </div>
+        )
+    }
 }
 
 const mainStyle: CSSProperties = {
