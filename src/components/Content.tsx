@@ -3,7 +3,7 @@ import React, { Component, CSSProperties } from 'react';
 import { Route} from 'react-router-dom';
 import BookDetail from './BookDetail';
 import BookView from './BookView';
-import Background from '../assets/background-space.jpg'
+import Background from '../assets/background-classic.jpg'
 
 export interface Poem {
     content: string
