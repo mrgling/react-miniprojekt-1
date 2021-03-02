@@ -26,9 +26,6 @@ class Sectionitem extends Component<Props, State> {
                     <p>{this.props.poem.title}</p>
                     <p style= { poemStyle }>{this.props.poem.poet.name}</p>
     
-                {/* <Link to="/bookdetail" style={ linkStyle }>
-                </Link> */}
-    
             {this.state.isModalVisible && (
                 <Modal persistant shouldClose={this.closeModal} >
                     <b><p style= { poemStyle }>{this.props.poem.title}</p></b>

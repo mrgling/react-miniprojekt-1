@@ -54,7 +54,9 @@ class Modal extends Component<Props> {
         maxHeight: '75%',
         maxWidth: '75%',
         margin: '7rem auto',
-        padding: '2rem 5rem'
+        padding: '2rem 5rem',
+        border: '1px solid black',
+        boxShadow: 'rgba(0, 0, 0, 0.15) 1rem 1rem 2rem'
     }
     
     
