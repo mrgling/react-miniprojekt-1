@@ -31,12 +31,14 @@ const itemStyle: CSSProperties = {
     fontSize: '1.2rem',
     color: 'black',
     background: 'white',
+    opacity: '0.8',
     margin: '1rem',
     border: '1px solid black',
     textDecoration: 'none',
     padding: '2rem',
     display: 'flex',
-    maxWidth: '75%'
+    maxWidth: '75%',
+    borderRadius: '1rem'
 }
 
 export default Sectionitem;

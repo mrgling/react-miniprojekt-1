@@ -1,7 +1,9 @@
+
 import React, { Component, CSSProperties } from 'react';
 import { Route} from 'react-router-dom';
 import BookDetail from './BookDetail';
 import BookView from './BookView';
+import Background from '../assets/background-space.jpg'
 
 export interface Poem {
     content: string
@@ -56,7 +58,12 @@ class Content extends Component<Props, State> {
 }
 
 const contentStyle: CSSProperties = {
-    width: '100%'
+    width: '100%',
+    backgroundImage: `url(${Background})`,
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    borderRadius: '0 2rem 0 0' 
+
 }
 
 export default Content;
