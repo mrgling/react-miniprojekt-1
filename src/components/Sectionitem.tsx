@@ -1,5 +1,5 @@
 import React, { Component, CSSProperties } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { Poem } from './Content';
 import Modal from './Modal';
 
@@ -30,9 +30,9 @@ class Sectionitem extends Component<Props, State> {
                 </Link> */}
     
             {this.state.isModalVisible && (
-            <Modal persistant shouldClose={this.closeModal}>
+            <Modal persistant shouldClose={this.closeModal} >
                 <h1>
-                    MODALISERA MERA
+                    DIKT-MODAL
                 </h1>
     
             </Modal>    
