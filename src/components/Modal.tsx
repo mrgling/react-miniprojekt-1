@@ -45,7 +45,7 @@ class Modal extends Component<Props, State> {
         display: 'flex',
         flexDirection: 'column',
         fontFamily: 'Gloria Hallelujah, cursive',
-        fontSize: '1.2rem',
+        fontSize: '1rem',
         height: '100%', 
         width: '100%', 
         alignItems: 'center', 
