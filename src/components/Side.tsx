@@ -46,6 +46,7 @@ class Side extends Component<Props,State> {
             </div>
         )
     }
+
 }
 
 const openMarsvin = () => {
