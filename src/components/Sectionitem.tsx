@@ -1,38 +1,47 @@
-import React, { CSSProperties } from 'react';
+import React, { Component, CSSProperties } from 'react';
 import { Link } from 'react-router-dom';
 import { Poem } from './Content';
+import Modal from './Modal';
 
 interface Props {
     poem: Poem;
 }
+interface State {
+    isModalVisible: boolean;
+}
 
-function Sectionitem(props: Props) {
+class Sectionitem extends Component<Props, State> {
 
-    const openModal = () => {
-        alert('POEM-MODAL')
+    state: State = {
+        isModalVisible: false
     }
 
-    const closeModal = () => {
+    openModal = () => this.setState({ isModalVisible: true });
+
+    closeModal = () => this.setState({ isModalVisible: false});
+
+    render() {
+        return (
+            <div style={ itemStyle } onClick={ this.openModal }>
+                    <p>{this.props.poem.title}</p>
+                    <p style= { poemStyle }>{this.props.poem.poet.name}</p>
+    
+                {/* <Link to="/bookdetail" style={ linkStyle }>
+                </Link> */}
+    
+            {this.state.isModalVisible && (
+            <Modal persistant shouldClose={this.closeModal}>
+                <h1>
+                    MODALISERA MERA
+                </h1>
+    
+            </Modal>    
+            )}
+    
+            </div>
+        )
 
     }
-
-    return (
-        <div style={ itemStyle } onClick={ openModal }>
-                <p>{props.poem.title}</p>
-                <p style= { poemStyle }>{props.poem.poet.name}</p>
-
-            {/* <Link to="/bookdetail" style={ linkStyle }>
-            </Link> */}
-
-        <Modal shouldClose={closeModal}>
-            <h1>
-                MODALISERA MERA
-            </h1>
-
-        </Modal>    
-
-        </div>
-    )
 }
 
 const poemStyle: CSSProperties = {
