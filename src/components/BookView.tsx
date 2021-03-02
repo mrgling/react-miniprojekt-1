@@ -18,7 +18,7 @@ function BookView(props: Props) {
 }
 
 const bookviewStyle: CSSProperties = {
-    background: 'linear-gradient(180deg, #C7C7C7, #F3F3F3)',
+    //background: 'linear-gradient(180deg, #C7C7C7, #F3F3F3)',
     minHeight: '100%',
     display: 'flex',
     flexDirection: 'row',

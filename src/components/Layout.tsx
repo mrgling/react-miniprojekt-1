@@ -22,7 +22,8 @@ class Layout extends Component<Props, State> {
 }
 
 const layoutStyle: CSSProperties = {
-    height: '100%'
+    height: '100%',
+    background: 'black'
 }
 
 export default Layout;

@@ -14,7 +14,7 @@ function Main() {
 const mainStyle: CSSProperties = {
     display: 'flex',
     height: 'calc(100% - 5rem)',
-    width: '100%'
+    width: '100%',
 }
 
 export default Main;

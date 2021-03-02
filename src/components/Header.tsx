@@ -1,12 +1,12 @@
 import React, { CSSProperties } from 'react';
-import logo from '../assets/logo.png';
+import home from '../assets/home.png';
 import { Link } from 'react-router-dom';
 
 function Header() {
     return (
         <div style={ headerStyle }>
             <Link to="/">
-                <img src={logo} style={ logoStyle } alt="logo" />
+                <img src={home} style={ logoStyle } alt="logo" />
             </Link>
 
             <h1 style={ headerItem }>Dagens dikt</h1>
@@ -17,7 +17,8 @@ function Header() {
 }
 
 const headerStyle: CSSProperties = {
-    background: 'linear-gradient(180deg, #4D6724, #243D19)', 
+    background: 'linear-gradient(180deg, #616161, #000000)', 
+    //background: 'black',
     height: '5rem',
     display: 'flex',
     padding: '0 1rem',
@@ -39,7 +40,7 @@ const logoStyle: CSSProperties = {
     height: '4rem',
     left: '1rem',
     position: 'absolute',
-    border: '1px solid black'
+    color: 'white'
   }
 
 export default Header;
