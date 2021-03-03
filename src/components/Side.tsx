@@ -1,4 +1,4 @@
-import React, { Component, CSSProperties } from 'react';
+import React, { CSSProperties } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 import logoSpace from '../assets/logo-space.jpg';
@@ -8,45 +8,32 @@ import { Link } from 'react-router-dom';
 
 interface Props {
     onThemeClick: () => void;
+    spaceTheme: boolean;
 }
 
-interface State {
-    logo: string;
-}
-class Side extends Component<Props,State> {
-    state: State = {
-        logo: logoClassic
-    }
+function Side(props:Props) {
 
-    changeTheme = () => {
-        if (this.state.logo === logoClassic) {
-            this.setState({ logo: logoSpace })            
-            }
-        else {
-            this.setState({ logo: logoClassic }) 
-        }    
-    }
+    const logo = props.spaceTheme ? logoSpace : logoClassic
 
-    render() {
-        return (
-            <div style={ sideStyle }>
-                <div style={ logoStyle } >
-                    <Link to="/">
-                        <img src={this.state.logo} style={ imageStyle } alt="logo" />
-                    </Link>
-                </div>
-                <div>
-                    <Button style={ buttonStyle } variant="info" 
-                            onClick={ this.props.onThemeClick && this.changeTheme }>Ändra tema</Button>{' '}
-                    <Button style={ buttonStyle } variant="info" onClick={ reloadPage }>Slumpa</Button>{' '}
-                    <Link to="/marsvin">
-                        <Button style={ buttonStyle } variant="info">Marsvin</Button>{' '}
-                    </Link>
-                    </div>    
+    return (
+        <div style={ sideStyle }>
+            <div style={ logoStyle } >
+                <Link to="/">
+                    <img src={logo} style={ imageStyle } alt="logo" />
+                </Link>
             </div>
-        )
-    }
+            <div>
+                <Button style={ buttonStyle } variant="info" 
+                        onClick={ props.onThemeClick}>Byt tema</Button>{' '}
+                <Button style={ buttonStyle } variant="info" onClick={ reloadPage }>Nya dikter</Button>{' '}
+                <Link to="/marsvin">
+                    <Button style={ buttonStyle } variant="info">Marsvin</Button>{' '}
+                </Link>
+                </div>    
+        </div>
+    )
 }
+
 
 const reloadPage = () => {
     window.location.reload();

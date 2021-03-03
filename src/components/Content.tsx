@@ -1,7 +1,8 @@
-import React, { Component, CSSProperties } from 'react';
+import React, { Component } from 'react';
 import { Route} from 'react-router-dom';
 import PoemView from './PoemView';
-import backgroundClassic from '../assets/background-classic.jpg'
+import backgroundClassic from '../assets/background-classic.jpg';
+import backgroundSpace from '../assets/background-space.jpg';
 import Marsvin from './Marsvin';
 export interface Poem {
     content: string
@@ -14,18 +15,18 @@ export interface Poem {
 }
 interface State {
     poems: Poem[];
-    theme: string;
-}
 
-let Background = backgroundClassic;
+}
 
 interface Props {
-    theme: string;
+    isSpaceTheme: boolean;
 }
 class Content extends Component<Props, State> {
+
+    background = this.props.isSpaceTheme? backgroundSpace : backgroundClassic;
+    
     state: State = {
         poems: [],
-        theme: this.props.theme
     }
 
     async fetchPoems() {
@@ -45,12 +46,23 @@ class Content extends Component<Props, State> {
         this.fetchPoems();
     }
 
+
     render() {
+
+        this.background = this.props.isSpaceTheme? backgroundSpace : backgroundClassic;
         return (
-            <div style={ contentStyle(this.props) }>
+            <div style={{
+                width: '100%',
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat',
+                borderRadius: '0 2rem 0 0',
+                backgroundImage: `url(${this.background})` 
+                }}>
+
                 <Route exact path="/">
                     <PoemView poems={this.state.poems}/>
                 </Route>
+
                 <Route path="/marsvin" component={Marsvin}/>
             
             </div>
@@ -58,13 +70,5 @@ class Content extends Component<Props, State> {
     }
 }
 
-const contentStyle = (props: Props): CSSProperties =>({
-    width: '100%',
-    backgroundImage: `url(${Background})`,
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    borderRadius: '0 2rem 0 0' 
-
-})
 
 export default Content;

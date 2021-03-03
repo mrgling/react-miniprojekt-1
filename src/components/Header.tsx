@@ -8,12 +8,9 @@ function Header() {
             <Link to="/">
                 <img src={home} style={ logoStyle } alt="logo" />
             </Link>
-
             <h1 style={ headerItem }>Dagens dikt</h1>
         </div>
-
     )
-
 }
 
 const headerStyle: CSSProperties = {
