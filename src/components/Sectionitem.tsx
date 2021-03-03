@@ -34,7 +34,9 @@ class Sectionitem extends Component<Props, State> {
                         <Modal shouldClose={this.closeModal}>
                             <b><p style= { poemStyle }>{this.props.poem.title}</p></b>
                             <p style= { poemStyle }>{this.props.poem.content}</p>  
-                            <p style= { poemStyle }>{this.props.poem.poet.name}</p>
+                            <a href={this.props.poem.poet.url} target="_blank" rel="noreferrer">
+                                <p style= { poemStyle }>{this.props.poem.poet.name}</p>
+                            </a>
                             <button onClick={this.closeModal}>STÄNG</button>
                         </Modal>    
                     </ErrorBoundary>

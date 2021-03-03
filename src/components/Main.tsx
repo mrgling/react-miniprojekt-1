@@ -11,9 +11,7 @@ class Main extends Component <Props, State> {
         isSpaceTheme: false
     }
     toggleTheme = () => {
-        console.log("toggleTheme is " + this.state.isSpaceTheme)
         this.setState({ isSpaceTheme: !this.state.isSpaceTheme})
-        console.log("themetoggle to " + this.state.isSpaceTheme)
       }
     render() {
         return (
