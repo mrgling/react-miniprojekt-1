@@ -7,6 +7,8 @@
 *En slumpad samling med dikter från hela världen.*  
 *Och marsvin!*
 
+I mappen "documents" finns presentation samt Figma-sketcher
+
 *Gruppmedlemmar*  
 Jonas Glingert  
 Lisa Pääjärvi  
