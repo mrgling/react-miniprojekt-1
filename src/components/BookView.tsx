@@ -8,13 +8,10 @@ interface Props {
 }
 
 function BookView(props: Props) {
-
-
-
     return (
-        <div style={ bookviewStyle } >
+        <div style={ bookviewStyle }>
             <ErrorBoundary>
-            {props.poems.map(poem => <Sectionitem poem={poem} />)}
+            {props.poems.map(poem => <Sectionitem poem={poem} key={poem.title}/>)}
             </ErrorBoundary>
         </div>
     )

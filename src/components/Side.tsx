@@ -6,7 +6,9 @@ import logoClassic from '../assets/logo-classic.jpg';
 import { Link } from 'react-router-dom';
 
 
-interface Props {}
+interface Props {
+    onThemeClick: () => void;
+}
 
 interface State {
     logo: string;
@@ -35,10 +37,10 @@ class Side extends Component<Props,State> {
                     </Link>
                 </div>
                 <div>
-                    <Button style={ buttonStyle } variant="info" onClick={ this.changeTheme }>Tema</Button>{' '}
+                    <Button style={ buttonStyle } variant="info" onClick={ this.props.onThemeClick && this.changeTheme }>Ändra tema</Button>{' '}
                     <Button style={ buttonStyle } variant="info" onClick={ reloadPage }>Slumpa</Button>{' '}
                     <Button style={ buttonStyle } variant="info" onClick={ openMarsvin }>Marsvin</Button>{' '}
-                </div>
+                    </div>
     
             </div>
         )
@@ -79,7 +81,7 @@ const logoStyle: CSSProperties = {
     borderRadius: '1rem',
     display: 'flex'
   }
-  
+
   const imageStyle: CSSProperties = {
     width: '100%',
     display: 'flex',

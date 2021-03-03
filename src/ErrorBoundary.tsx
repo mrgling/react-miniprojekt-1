@@ -14,6 +14,7 @@ class ErrorBoundary extends Component<Props, State>{
     };
 
     static getDerivedStateFromError(): State {
+        console.log('hmmmm');
         return { hasError: true }
     }
     componentDidCatch(error: Error, errorInfo: ErrorInfo): void {
@@ -26,6 +27,7 @@ class ErrorBoundary extends Component<Props, State>{
     
     render() {
         if (this.state.hasError) {
+            console.log('rendering fallback UI');
             return (
             <div style= {rootStyle}>
                 <p style={textStyle}>Något gick fel, var god att ladda om sidan</p> 
