@@ -17,7 +17,6 @@ class Modal extends Component<Props, State> {
     }
         
     handleOnClick = (event: React.MouseEvent) => {
-        console.log('YES');
         if (this.props.persistant) return;
         this.props.shouldClose(event);
     }

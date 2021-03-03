@@ -14,14 +14,12 @@ class Sectionitem extends Component<Props, State> {
         isModalVisible: false
     }
 
-    openModal = () => {
-        console.trace('OPEN MODAL!!');   
+    openModal = () => { 
         this.setState({ isModalVisible: true });
     }
 
     closeModal = (event: React.MouseEvent) => {
         event.stopPropagation();
-        console.log('CLOSE MODAL!!')
         this.setState({ isModalVisible: false });
     };
 
