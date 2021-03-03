@@ -38,11 +38,9 @@ class Sectionitem extends Component<Props, State> {
                             <button onClick={this.closeModal}>STÄNG</button>
                         </Modal>    
                     </ErrorBoundary>
-                )}
-    
+                )}  
             </div>
         )
-
     }
 }
 

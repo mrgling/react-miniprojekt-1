@@ -17,17 +17,16 @@ class Side extends Component<Props,State> {
     state: State = {
         logo: logoClassic
     }
+
     changeTheme = () => {
         if (this.state.logo === logoClassic) {
             this.setState({ logo: logoSpace })            
             }
         else {
             this.setState({ logo: logoClassic }) 
-        }
-
-
-    
+        }    
     }
+
     render() {
         return (
             <div style={ sideStyle }>
@@ -37,17 +36,16 @@ class Side extends Component<Props,State> {
                     </Link>
                 </div>
                 <div>
-                    <Button style={ buttonStyle } variant="info" onClick={ this.props.onThemeClick && this.changeTheme }>Ändra tema</Button>{' '}
+                    <Button style={ buttonStyle } variant="info" 
+                            onClick={ this.props.onThemeClick && this.changeTheme }>Ändra tema</Button>{' '}
                     <Button style={ buttonStyle } variant="info" onClick={ reloadPage }>Slumpa</Button>{' '}
                     <Link to="/marsvin">
-                    <Button style={ buttonStyle } variant="info">Marsvin</Button>{' '}
+                        <Button style={ buttonStyle } variant="info">Marsvin</Button>{' '}
                     </Link>
-                    </div>
-    
+                    </div>    
             </div>
         )
     }
-
 }
 
 const reloadPage = () => {

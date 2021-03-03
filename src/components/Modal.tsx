@@ -37,7 +37,6 @@ class Modal extends Component<Props, State> {
             this.element
             );
         }
-        
     }
 
     const modalStyle: CSSProperties = {

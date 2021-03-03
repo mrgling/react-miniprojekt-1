@@ -9,7 +9,7 @@ function App() {
         <ErrorBoundary>
           <Layout />
         </ErrorBoundary>
-        </Router>
+    </Router>
   );
 }
 

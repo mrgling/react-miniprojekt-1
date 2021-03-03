@@ -19,7 +19,6 @@ class Main extends Component <Props, State> {
             this.setState({ theme: 'backgroundClassic' }) ;
 
         }
-
       }
     render() {
         console.log(this.state.theme)
@@ -27,8 +26,7 @@ class Main extends Component <Props, State> {
             <div style={ mainStyle }>
                 <Content theme={this.state.theme}/>
                 <Side onThemeClick = {this.toggleTheme}/>
-            </div>
-            
+            </div>            
         )
     }
 }

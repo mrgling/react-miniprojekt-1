@@ -12,7 +12,6 @@ export interface Poem {
     title: string
     url: string
 }
-
 interface State {
     poems: Poem[];
     theme: string;
@@ -29,7 +28,6 @@ class Content extends Component<Props, State> {
         theme: this.props.theme
     }
 
-    
     async fetchPoems() {
         try {
           const response = await fetch('https://www.poemist.com/api/v1/randompoems'
@@ -41,7 +39,6 @@ class Content extends Component<Props, State> {
         } catch (error: unknown) {
           console.error(error);
         }
-        console.log(this.props)
     }
 
     componentDidMount() {
@@ -59,13 +56,11 @@ class Content extends Component<Props, State> {
             </div>
         )
     }
-
 }
 
 const contentStyle = (props: Props): CSSProperties =>({
     width: '100%',
     backgroundImage: `url(${Background})`,
-    //backgroundImage: `url(${props.theme})`,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     borderRadius: '0 2rem 0 0' 
