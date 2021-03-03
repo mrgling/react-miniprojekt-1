@@ -2,11 +2,11 @@
 
 **Dagens dikt**
 
-*JavaScript - fördjupning, 30 yhp*
-
 *En slumpad samling med dikter från hela världen. Och marsvin!*
 
 I mappen "documents" finns presentation samt Figma-sketcher.
+
+*JavaScript - fördjupning, 30 yhp*
 
 *Gruppmedlemmar*  
 Jonas Glingert  
@@ -19,6 +19,6 @@ Tony Martinsson
 
 ## Starta
 
-* `npm start`  
+* `npm start`   
 
 [https://github.com/mrgling/react-miniprojekt-1](https://github.com/mrgling/react-miniprojekt-1)
