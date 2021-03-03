@@ -7,9 +7,9 @@ interface Props {
     poems: Poem[];
 }
 
-function BookView(props: Props) {
+function PoemView(props: Props) {
     return (
-        <div style={ bookviewStyle }>
+        <div style={ viewStyle }>
             <ErrorBoundary>
             {props.poems.map(poem => <Sectionitem poem={poem} key={poem.title}/>)}
             </ErrorBoundary>
@@ -17,7 +17,7 @@ function BookView(props: Props) {
     )
 }
 
-const bookviewStyle: CSSProperties = {
+const viewStyle: CSSProperties = {
     minHeight: '100%',
     display: 'flex',
     flexDirection: 'row',
@@ -26,4 +26,4 @@ const bookviewStyle: CSSProperties = {
     justifyContent: 'center'
 }
 
-export default BookView;
+export default PoemView;
