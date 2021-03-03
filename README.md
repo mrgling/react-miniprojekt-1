@@ -1,8 +1,8 @@
-# Miniprojekt 1 - Create React App
+## Miniprojekt 1 - Create React App
 
-**Dagens dikt**
+# Dagens dikt
 
-*En slumpad samling med dikter från hela världen. Och marsvin!*
+**En slumpad samling med dikter från hela världen. Och marsvin!**
 
 I mappen "documents" finns presentation samt Figma-sketcher.
 
