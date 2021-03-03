@@ -12,18 +12,23 @@ class Main extends Component <Props, State> {
     }
     toggleTheme = () => {
         if (this.state.theme === 'backgroundClassic') {
-            this.setState({ theme: 'backgroundSpace' })            
+            this.setState({ theme: 'backgroundSpace' });  
+            console.log(this.state.theme)
             }
         else {
-            this.setState({ theme: 'backgroundClassic' }) 
+            this.setState({ theme: 'backgroundClassic' }) ;
+
         }
+
       }
     render() {
+        console.log(this.state.theme)
         return (
             <div style={ mainStyle }>
                 <Content theme={this.state.theme}/>
                 <Side onThemeClick = {this.toggleTheme}/>
             </div>
+            
         )
     }
 }

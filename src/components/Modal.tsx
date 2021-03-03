@@ -59,7 +59,7 @@ class Modal extends Component<Props, State> {
         paddingRight: '10%',
         border: '1px solid black',
         boxShadow: 'rgba(0, 0, 0, 0.15) 1rem 1rem 2rem',
-        overflow: 'hidden'
+        overflow: 'auto'
     }
         
     export default Modal;

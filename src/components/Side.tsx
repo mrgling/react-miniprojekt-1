@@ -37,10 +37,9 @@ class Side extends Component<Props,State> {
                     </Link>
                 </div>
                 <div>
-                    <Button style={ buttonStyle } variant="success" onClick={ this.props.onThemeClick }>Ändra tema</Button>{' '}
+                    <Button style={ buttonStyle } variant="success" onClick={ this.props.onThemeClick && this.changeTheme }>Ändra tema</Button>{' '}
                     <Button style={ buttonStyle } variant="warning" onClick={ reloadPage }>Slumpa</Button>{' '}
                     <Button style={ buttonStyle } variant="primary" onClick={ openMarsvin }>Marsvin</Button>{' '}
-                //this.changeTheme
                     </div>
     
             </div>
