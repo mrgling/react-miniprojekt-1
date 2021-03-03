@@ -39,17 +39,15 @@ class Side extends Component<Props,State> {
                 <div>
                     <Button style={ buttonStyle } variant="info" onClick={ this.props.onThemeClick && this.changeTheme }>Ändra tema</Button>{' '}
                     <Button style={ buttonStyle } variant="info" onClick={ reloadPage }>Slumpa</Button>{' '}
-                    <Button style={ buttonStyle } variant="info" onClick={ openMarsvin }>Marsvin</Button>{' '}
+                    <Link to="/marsvin">
+                    <Button style={ buttonStyle } variant="info">Marsvin</Button>{' '}
+                    </Link>
                     </div>
     
             </div>
         )
     }
 
-}
-
-const openMarsvin = () => {
-    alert('HEJ ALLA GLADA MARSVIN');
 }
 
 const reloadPage = () => {
@@ -59,7 +57,6 @@ const reloadPage = () => {
 const sideStyle: CSSProperties = {
     display: 'flex',
     flexDirection: 'column',
-    //background: 'linear-gradient(180deg, #C7C7C7, #F3F3F3)',
     background: 'black',
     borderLeft: '1px solid black',
     width: '25%',
