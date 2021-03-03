@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 interface State {}
 interface Props {
     persistant?: boolean;
-    shouldClose: () => void;
+    shouldClose: (event: React.MouseEvent) => void;
 }
 
 class Modal extends Component<Props, State> {
@@ -16,9 +16,10 @@ class Modal extends Component<Props, State> {
         this.element.id = 'modal-root';
     }
         
-    handleOnClick = () => {
+    handleOnClick = (event: React.MouseEvent) => {
+        console.log('YES');
         if (this.props.persistant) return;
-        this.props.shouldClose();
+        this.props.shouldClose(event);
     }
     
     componentDidMount() {
@@ -55,11 +56,11 @@ class Modal extends Component<Props, State> {
         maxHeight: '75%',
         maxWidth: '75%',
         margin: '7rem auto',
-        paddingLeft: '10%',
-        paddingRight: '10%',
+        padding: '10%',
+        paddingTop: '15%',
         border: '1px solid black',
         boxShadow: 'rgba(0, 0, 0, 0.15) 1rem 1rem 2rem',
-        overflow: 'auto'
+        overflowY: 'auto'
     }
         
     export default Modal;

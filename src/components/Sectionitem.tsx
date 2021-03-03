@@ -14,26 +14,33 @@ class Sectionitem extends Component<Props, State> {
         isModalVisible: false
     }
 
-    openModal = () => this.setState({ isModalVisible: true });
+    openModal = () => {
+        console.trace('OPEN MODAL!!');   
+        this.setState({ isModalVisible: true });
+    }
 
-    closeModal = () => this.setState({ isModalVisible: false});
+    closeModal = (event: React.MouseEvent) => {
+        event.stopPropagation();
+        console.log('CLOSE MODAL!!')
+        this.setState({ isModalVisible: false });
+    };
 
     render() {
         return (
             <div style={ itemStyle } onClick={ this.openModal }>
-                    <p>{this.props.poem.title}</p>
-                    <p style= { poemStyle }>{this.props.poem.poet.name}</p>
+                <p>{this.props.poem.title}</p>
+                <p style= { poemStyle }>{this.props.poem.poet.name}</p>
     
-            {this.state.isModalVisible && (
-                <ErrorBoundary>
-                    <Modal persistant shouldClose={this.closeModal}>
-                        <b><p style= { poemStyle }>{this.props.poem.title}</p></b>
-                        <p style= { poemStyle }>{this.props.poem.content}</p>  
-                        <p style= { poemStyle }>{this.props.poem.poet.name}</p>
-                        <button onClick={this.closeModal}>STÄNG</button>
-                    </Modal>    
-                </ErrorBoundary>
-            )}
+                {this.state.isModalVisible && (
+                    <ErrorBoundary>
+                        <Modal shouldClose={this.closeModal}>
+                            <b><p style= { poemStyle }>{this.props.poem.title}</p></b>
+                            <p style= { poemStyle }>{this.props.poem.content}</p>  
+                            <p style= { poemStyle }>{this.props.poem.poet.name}</p>
+                            <button onClick={this.closeModal}>STÄNG</button>
+                        </Modal>    
+                    </ErrorBoundary>
+                )}
     
             </div>
         )
