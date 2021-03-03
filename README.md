@@ -4,8 +4,7 @@
 
 *Dagens dikt*
 
-En slumpad samling med dikter från hela världen.
-Och marsvin!
+*En slumpad samling med dikter från hela världen.  Och marsvin!*
 
 *Gruppmedlemmar*  
 Jonas Glingert  
@@ -18,6 +17,6 @@ Tony Martinsson
 
 ## Starta
 
-* `npm start`
+* `npm start`  
 
 [https://github.com/mrgling/react-miniprojekt-1](https://github.com/mrgling/react-miniprojekt-1)
