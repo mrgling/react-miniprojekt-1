@@ -1,13 +1,12 @@
 # Miniprojekt 1 - Create React App
 
-**JavaScript - fördjupning, 30 yhp**
+**Dagens dikt**
 
-*Dagens dikt*
+*JavaScript - fördjupning, 30 yhp*
 
-*En slumpad samling med dikter från hela världen.*  
-*Och marsvin!*
+*En slumpad samling med dikter från hela världen. Och marsvin!*
 
-I mappen "documents" finns presentation samt Figma-sketcher
+I mappen "documents" finns presentation samt Figma-sketcher.
 
 *Gruppmedlemmar*  
 Jonas Glingert  
