@@ -25,9 +25,10 @@ const marsvinContainer: CSSProperties = {
 
 const marsvinStyle: CSSProperties = {
     display: 'flex',
-    height: '30%',
-    margin: '2rem',
-    border: '1px solid black'
+    width: '30%',
+    margin: '1rem 0.5rem',
+    border: '1px solid black',
+    borderRadius: '20rem'
 }
 
 export default Marsvin;
