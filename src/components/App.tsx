@@ -8,8 +8,8 @@ function App() {
     <Router>
         <ErrorBoundary>
           <Layout />
-      </ErrorBoundary>
-      </Router>
+        </ErrorBoundary>
+        </Router>
   );
 }
 
