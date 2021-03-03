@@ -4,7 +4,8 @@
 
 *Dagens dikt*
 
-*En slumpad samling med dikter från hela världen.  Och marsvin!*
+*En slumpad samling med dikter från hela världen.*  
+*Och marsvin!*
 
 *Gruppmedlemmar*  
 Jonas Glingert  
