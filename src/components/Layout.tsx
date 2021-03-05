@@ -1,24 +1,14 @@
-import React, { Component, CSSProperties } from 'react';
+import React, { CSSProperties } from 'react';
 import Header from './Header'
 import Main from './Main'
 
-
-interface Props {}
-
-interface State {
-
-}
-class Layout extends Component<Props, State> {
-   
-    render() {
-
-        return (
-            <div style={ layoutStyle }>
-                <Header />
-                <Main />
-            </div>
-        )
-    }
+function Layout() {
+    return (
+        <div style={ layoutStyle }>
+            <Header />
+            <Main />
+        </div>
+    )
 }
 
 const layoutStyle: CSSProperties = {

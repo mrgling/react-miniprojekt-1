@@ -11,7 +11,7 @@ function PoemView(props: Props) {
     return (
         <div style={ viewStyle }>
             <ErrorBoundary>
-            {props.poems.map(poem => <Sectionitem poem={poem} key={poem.title}/>)}
+                {props.poems.map(poem => <Sectionitem poem={poem} key={poem.title}/>)}
             </ErrorBoundary>
         </div>
     )

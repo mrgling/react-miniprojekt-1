@@ -32,12 +32,14 @@ class Sectionitem extends Component<Props, State> {
                 {this.state.isModalVisible && (
                     <ErrorBoundary>
                         <Modal shouldClose={this.closeModal}>
-                            <b><p style= { poemStyle }>{this.props.poem.title}</p></b>
-                            <p style= { poemStyle }>{this.props.poem.content}</p>  
-                            <a href={this.props.poem.poet.url} target="_blank" rel="noreferrer">
+                            <div style= { poemDivStyle}>
+                                <b><p style= { poemStyle }>{this.props.poem.title}</p></b>
+                                <p>{this.props.poem.content}</p>  
+                                <a href={this.props.poem.poet.url} target="_blank" rel="noreferrer">
                                 <p style= { poemStyle }>{this.props.poem.poet.name}</p>
-                            </a>
-                            <button onClick={this.closeModal}>STÄNG</button>
+                                </a>
+                                <button style= { buttonStyle } onClick={this.closeModal}>STÄNG</button>
+                            </div>
                         </Modal>    
                     </ErrorBoundary>
                 )}  
@@ -46,9 +48,23 @@ class Sectionitem extends Component<Props, State> {
     }
 }
 
+const buttonStyle: CSSProperties = {
+    display: 'flex',
+    justifyContent: 'center'
+}
+
 const poemStyle: CSSProperties = {
     fontSize: '1rem',
     textAlign: 'center'
+}
+
+const poemDivStyle: CSSProperties = {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',    
+    margin: '5rem auto',
+    boxSizing: 'initial'
 }
 
 const itemStyle: CSSProperties = {
@@ -60,7 +76,6 @@ const itemStyle: CSSProperties = {
     margin: '1rem',
     border: '1px solid black',
     textDecoration: 'none',
-    // display: 'flex',
     borderRadius: '1rem',
     padding: '1rem',
     maxWidth: '75%',

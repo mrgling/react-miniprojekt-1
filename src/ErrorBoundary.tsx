@@ -14,7 +14,6 @@ class ErrorBoundary extends Component<Props, State>{
     };
 
     static getDerivedStateFromError(): State {
-        console.log('hmmmm');
         return { hasError: true }
     }
     componentDidCatch(error: Error, errorInfo: ErrorInfo): void {
