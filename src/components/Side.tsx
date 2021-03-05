@@ -26,7 +26,7 @@ function Side(props:Props) {
                 <Button style={ buttonStyle } variant="info" 
                         onClick={ props.onThemeClick}>Byt tema</Button>{' '}
                 <Button style={ buttonStyle } variant="info" onClick={ reloadPage }>Nya dikter</Button>{' '}
-                <Link to="/marsvin">
+                <Link to="/marsvin" style={{ textDecoration: 'none'}}>
                     <Button style={ buttonStyle } variant="info">Marsvin</Button>{' '}
                 </Link>
                 </div>    
@@ -54,7 +54,7 @@ const buttonStyle: CSSProperties = {
     display: 'flex',
     justifyContent: 'center',
     width: '8rem',
-    margin: '1rem'
+    margin: '1rem',
 }
 
 const logoStyle: CSSProperties = {

@@ -44,24 +44,16 @@ class Modal extends Component<Props, State> {
         flexDirection: 'column',
         fontFamily: 'Gloria Hallelujah, cursive',
         fontSize: '1rem',
-        // height: 'auto', 
         width: '100%', 
-        // alignItems: 'center', 
-        // justifyContent: 'center', 
         background: 'rgba(255, 253, 247, 0.9)', 
         color: 'black',
-        // borderRadius: '1rem',
         maxHeight: '75%',
         maxWidth: '75%',
-        // marginTop: '10rem',
-        // margin: '7rem auto',
-        // padding: '10%',
-        // paddingTop: '15%',
+        minHeight: '75%',
         padding: '0% 10%',
         border: '1px solid black',
         boxShadow: 'rgba(0, 0, 0, 0.15) 1rem 1rem 2rem',
-        overflow: 'auto',
-        // overflowY: 'hidden'
+        overflow: 'auto'
     }
         
     export default Modal;
